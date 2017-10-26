@@ -1,0 +1,12 @@
+def solution(A):
+    # write your code in Python 2.7
+    s = 1
+    if len(A) == 1 and (A[0] > 1 or A[0] < 0):
+        return 1
+    elif len(A) == 1 and A[0] == 1:
+        return 2
+    B = sorted(A)
+    for i in B:
+        if i == s:
+            s = i + 1
+    return s
