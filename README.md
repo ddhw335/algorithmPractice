@@ -1,2 +1,2 @@
 # algorithmPractice
-This is a project allows me to practise writing algorithms.
+This is a project that allows me to practise writing algorithms.
