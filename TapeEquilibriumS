@@ -1,0 +1,18 @@
+# you can write to stdout for debugging purposes, e.g.
+# print("this is a debug message")
+
+def solution(A):
+    # write your code in Python 2.7
+    if len(A) == 2:
+        diff = abs(A[1] - A[0])
+        return diff
+    diff = float("Inf")
+    A1 = 0
+    A2 = sum(A)
+    for p in range(1, len(A)-1):
+        A1 += A[p-1]
+        A2 = A2 - A[p-1]
+        a = abs(A1 - A2)
+        if diff > a:
+            diff = a
+    return diff
