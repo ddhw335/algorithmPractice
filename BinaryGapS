@@ -1,0 +1,21 @@
+# you can write to stdout for debugging purposes, e.g.
+# print("this is a debug message")
+
+def solution(N):
+    # write your code in Python 2.7
+    s = 0
+    c = 0
+    a = False
+    while N >= 1:
+        R = N % 2
+        if R == 0 and a:
+           s += 1
+        elif R == 1:
+            a = True
+            if s > c:
+                c = s
+            s = 0
+        N = N / 2
+    return c
+    
+  #reference: https://www.wikihow.com/Convert-from-Decimal-to-Binary
