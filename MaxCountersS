@@ -16,3 +16,26 @@ def solution(N, A):
     
     
     
+# you can write to stdout for debugging purposes, e.g.
+# print("this is a debug message")
+
+def solution(N, A):
+    # write your code in Python 2.7
+    s = [0]*N
+    maxV = 0
+    maxValue = 0
+
+    for i in A:
+        if i <= N:
+            if maxValue > s[i-1]:
+                s[i-1] = maxValue
+            s[i-1] += 1
+            if s[i-1] > maxV:
+                maxV = s[i-1]
+        else:
+            maxValue = maxV
+
+    for i in range(0,N): #for those who did not get a change to execute increase(X) at all.
+        if maxValue > s[i]:
+            s[i] = maxValue
+    return s
