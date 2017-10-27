@@ -1,0 +1,12 @@
+# you can write to stdout for debugging purposes, e.g.
+# print("this is a debug message")
+
+def solution(A, B, K):
+    # write your code in Python 2.7
+    s1 = B / K
+    s2 = A / K
+    if A % K == 0:
+        count = s1 - s2 + 1
+    else:
+        count = s1 - s2
+    return count
