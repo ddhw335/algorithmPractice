@@ -1,0 +1,18 @@
+# you can write to stdout for debugging purposes, e.g.
+# print("this is a debug message")
+
+def solution(N, A):
+    # write your code in Python 2.7
+    s = [0]*N
+    maxV = 0
+    for i in A:
+        if i <= N:
+            s[i-1] += 1
+            if s[i-1] > maxV:
+                maxV = s[i-1]
+        else:
+            s = [maxV]*N
+    return s
+    
+    
+    
