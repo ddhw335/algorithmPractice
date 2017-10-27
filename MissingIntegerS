@@ -10,3 +10,19 @@ def solution(A):
         if i == s:
             s = i + 1
     return s
+
+
+
+# you can write to stdout for debugging purposes, e.g.
+# print("this is a debug message")
+
+def solution(A):
+    # write your code in Python 2.7
+    a = [False]*(len(A)+1)
+    for i in A:
+        if 1 <= i <= len(A) + 1:
+            a[i-1] = True
+    for i in xrange(len(a)+1):
+        if not a[i]:
+            return i+1
+#why only considered 1 to N+1? Because there are N integers, but still missing one. It means there is at least one missing.
